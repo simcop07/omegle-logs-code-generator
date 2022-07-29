@@ -22,7 +22,7 @@ def is404(code: str) -> tuple:
     except: # If the script cannot reach the page...
         return True, time.time() - start
 
-def find(n=10):
+def find(n: int=10) -> None:
     """Generates n codes and tries to reach logs.omegle.com using them"""
     for i in range(n):
         code = generate()
