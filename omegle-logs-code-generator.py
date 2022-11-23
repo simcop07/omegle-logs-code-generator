@@ -18,7 +18,7 @@ def is404(code: str) -> tuple:
     start = time.time()
     try:
         res = requests.get("https://logs.omegle.com/" + code)
-        return True, time.time() - start
+        return False, time.time() - start
     except: # If the script cannot reach the page...
         return True, time.time() - start
 
